@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A* Shortest Path</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+    canvas {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+    }
+</style>
+    </head>
+    <body>
+        <h2>A* Shortest Path</h2>
+        <div style="margin-bottom: 10px;">
+            <div style="display: inline-flex;">
+                <button id="start-button">Start</button>
+            </div>
+            <div style="margin-left:10px; display: inline-flex;">
+                <input type="checkbox" name="path-only" id="path-only" value="">
+                <label for="path-only">Path Only</label>
+            </div>
+            <div style="margin-left:10px; display: inline-flex;">
+                <input id="size" type="number" name="size" value="">
+                <label for="size" style="margin-left:10px;">Grid Size (Requires refresh)</label>
+            </div>
+            <div style="margin-left:10px; display: inline-flex;">
+                <input id="distance-weight" type="number" name="distance-weight" value="2">
+                <label for="distance-weight" style="margin-left:10px;">Weight for closeness, 0 will ignore distance, higher numbers will make it greedier, recommended is between 2-10ish, >1 can decrease accuracy</label>
+            </div>
+        </div>
+        <div>
+            <canvas id="canvas" class="test"></canvas>
+        </div>
+        <div style="margin-left:10px; display: inline-flex;">
+            <span>The last path took <span id="time">0.0</span> ms to calculate (console logs a more accurate number)</span>
+        </div>
+        <script src="controller.js" ></script>
+        <style>
+            .test{
+                border: 2px solid black;
+            }
+        </style>
+    </body>
+</html>
