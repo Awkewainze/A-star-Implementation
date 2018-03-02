@@ -5,7 +5,8 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "build": "parcel build index.html -d docs --public-url ./"
   },
   "repository": {
     "type": "git",
